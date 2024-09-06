@@ -1,0 +1,15 @@
+extern void (*_dtors)(void);
+
+void _epilog(void) {
+    typedef void (*voidfunctionptr) (void); /* ptr to function returning void */
+    voidfunctionptr *destructor; // Correctly defining as a pointer to function returning void
+
+    if (!strcmp(gp->currentMapName, "str_gor_10_gor_00013d20")) 
+    {
+        tegami_delete_9_text_11448();
+    }
+    for (destructor = &_dtors; *destructor; destructor++) 
+    {
+        (**destructor)(); 
+    }
+}

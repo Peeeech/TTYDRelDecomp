@@ -1,0 +1,48 @@
+void evt_gor_villager_urouro_check_func_9_text_208() //evt_gor_villager_urouro_check_func
+{
+    /* 
+     WARNING: Inlined function: _savefpr_28 
+ WARNING: Inlined function: _restfpr_28 
+
+undefined4 evt_gor_villager_urouro_check_func(void)
+
+{
+  EvtEntry *evtEntry;
+  uint *puVar1;
+  uint v;
+  uint v_00;
+  double dVar2;
+  float value;
+  float value_00;
+  float fVar3;
+  float fVar4;
+  float local_50;
+  undefined4 local_4c;
+  float local_48;
+  float local_44;
+  undefined4 local_40;
+  float local_3c;
+  
+  puVar1 = (uint *)evtEntry->currentCommandArguments;
+  v_00 = *puVar1;
+  v = puVar1[1];
+  value = evtGetFloat(evtEntry,puVar1[2]);
+  value_00 = evtGetFloat(evtEntry,puVar1[3]);
+  fVar3 = evtGetFloat(evtEntry,puVar1[4]);
+  fVar4 = evtGetFloat(evtEntry,v_00);
+  local_3c = evtGetFloat(evtEntry,v);
+  local_40 = DAT_8051faf8;
+  local_4c = DAT_8051fb04;
+  local_50 = value;
+  local_48 = value_00;
+  local_44 = fVar4;
+  dVar2 = (double)PSVECDistance(&local_50,&local_44);
+  if ((double)fVar3 < dVar2) {
+    evtSetFloat(evtEntry,v_00,value);
+    evtSetFloat(evtEntry,v,value_00);
+  }
+  return 2;
+}
+    */
+    return;
+}

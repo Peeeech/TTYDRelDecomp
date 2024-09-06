@@ -1,0 +1,8 @@
+int unk_gor_000000cc()
+{
+      if (unk_gor_bss00000004 != -1) 
+    {
+    psndSFXOff(unk_gor_bss00000004);
+    }
+    return 2;
+}

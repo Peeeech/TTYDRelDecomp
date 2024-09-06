@@ -1,0 +1,27 @@
+extern double double_to_int_gor_00013d10;
+
+int evt_goki_sub_intpl_get_value_9_text_6C(int param_1) //evt_goki_sub_intpl_get_value
+{
+  double dVar1;
+  double dVar2;
+  
+  dVar1 = intplGetValue((double)(float)((double)CONCAT44(0x43300000,
+                                                         *(int *)(param_1 + 0xc4) ^ 0x80000000) -
+                                       double_to_int_gor_00013d10),
+                        (double)(float)((double)CONCAT44(0x43300000,
+                                                         *(int *)(param_1 + 200) ^ 0x80000000) -
+                                       double_to_int_gor_00013d10),*(int *)(param_1 + 0xc0),
+                        *(int *)(param_1 + 0xd4),*(int *)(param_1 + 0xd8));
+  dVar2 = double_to_int_gor_00013d10;
+  //*(int *)(param_1 + 0x9c) = (int)dVar1;
+  dVar2 = intplGetValue((double)(float)((double)CONCAT44(0x43300000,
+                                                         *(int *)(param_1 + 0xcc) ^ 0x80000000) -
+                                       dVar2),
+                        (double)(float)((double)CONCAT44(0x43300000,
+                                                         *(int *)(param_1 + 0xd0) ^ 0x80000000) -
+                                       dVar2),*(int *)(param_1 + 0xc0),*(int *)(param_1 + 0xd4),
+                        *(int *)(param_1 + 0xd8));
+  *(int *)(param_1 + 0xa0) = (int)dVar2;
+  *(int *)(param_1 + 0xd4) = *(int *)(param_1 + 0xd4) + 1;
+  return 2;
+}

@@ -1,0 +1,42 @@
+extern void (*_ctors)(void);
+extern void (*gor_00_init_evt_9_data_EF7C)();
+extern void (*gor_01_init_evt)();
+extern void (*gor_02_init_evt)();
+extern void (*gor_03_init_evt)();
+extern void (*gor_04_init_evt)();
+extern void (*gor_10_init_evt)();
+extern void (*gor_11_init_evt)();
+extern void (*gor_12_init_evt)();
+extern const char(*str_gor_00_gor_00013d28);
+extern const char(*str_gor_01_gor_00013d30);
+extern const char(*str_gor_02_gor_00013d38);
+extern const char(*str_gor_03_gor_00013d40);
+extern const char(*str_gor_04_gor_00013d48);
+extern const char(*str_gor_10_gor_00013d20);
+extern const char(*str_gor_11_gor_00013d50);
+extern const char(*str_gor_12_gor_00013d58);
+extern const char(*str_gor_gor_00013d60);
+extern void (*btlsetup_gor_tbl);
+extern const DatabaseDefinition* btl_gor_setup_no_tbl;
+
+
+void _prolog(void)
+{  
+    typedef void (*voidfunctionptr) (void); /* ptr to function returning void */
+    voidfunctionptr *constructor; // Correctly defining as a pointer to function returning void
+
+  for (constructor = &_ctors; *constructor; constructor++) 
+  {
+    (**constructor)();
+  }
+  relSetEvtAddr(&str_gor_00_gor_00013d28,&gor_00_init_evt_9_data_EF7C);
+  relSetEvtAddr(&str_gor_01_gor_00013d30,&gor_01_init_evt);
+  relSetEvtAddr(&str_gor_02_gor_00013d38,&gor_02_init_evt);
+  relSetEvtAddr(&str_gor_03_gor_00013d40,&gor_03_init_evt);
+  relSetEvtAddr(&str_gor_04_gor_00013d48,&gor_04_init_evt);
+  relSetEvtAddr(&str_gor_10_gor_00013d20,&gor_10_init_evt);
+  relSetEvtAddr(&str_gor_11_gor_00013d50,&gor_11_init_evt);
+  relSetEvtAddr(&str_gor_12_gor_00013d58,&gor_12_init_evt);
+  relSetBtlAddr(&str_gor_gor_00013d60,&btlsetup_gor_tbl,&btl_gor_setup_no_tbl);
+  return;
+}

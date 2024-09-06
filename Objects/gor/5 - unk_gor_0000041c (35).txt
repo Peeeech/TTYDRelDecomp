@@ -1,0 +1,19 @@
+int unk_gor_0000041c(EvtEntry* entry) {
+    int* values = (int*)(entry);
+    int* values2 = (int*)(entry+1); 
+    const char* v1 = (const char*)evtGetValue(entry, *values);
+    const int* v2 = (const int*)evtGetValue(entry, *(values + 1));
+    const char* msg = msgSearch(v2);
+    const char* v3 = (const char*)evtGetValue(entry, *(values + 2));
+
+    size_t len1 = strlen(msg);
+    size_t len2 = strlen(v1);
+    size_t len3 = strlen(v3);
+
+    size_t totalSize = len1 + len2 + len3 + 1;  // +1 for null terminator
+    char* buffer = (char*)mapAlloc(mapalloc_base_ptr, totalSize);
+    memset(buffer, 0, totalSize);
+    sprintf(buffer, "%s%s%s", v1, msg, v3);
+    evtSetValue(entry, *(values + 3), (int)buffer);
+    return 2;
+}

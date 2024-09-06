@@ -1,0 +1,7 @@
+extern int (unk_gor_bss00000004);
+
+int unk_gor_00000104(int *param_1)
+{
+    unk_gor_bss00000004 = evtGetValue((EvtEntry *)param_1,**(int **)(param_1 + 6));
+    return 2;
+}

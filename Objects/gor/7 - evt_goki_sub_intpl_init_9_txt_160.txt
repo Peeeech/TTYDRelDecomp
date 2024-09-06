@@ -1,0 +1,26 @@
+int evt_goki_sub_intpl_init_9_text_160(EvtEntry* pEvt, int _dword) // evt_goki_sub_intpl_init
+{
+  int uVar1;
+  int uVar2;
+  int uVar3;
+  int uVar4;
+  int uVar5;
+  int uVar6;
+  int *piVar7;
+
+  piVar7 = (int *)pEvt->_18;
+  uVar1 = evtGetValue(pEvt,piVar7[0]);
+  uVar2 = evtGetValue(pEvt,piVar7[1]);
+  uVar3 = evtGetValue(pEvt,piVar7[2]);
+  uVar4 = evtGetValue(pEvt,piVar7[3]);
+  uVar5 = evtGetValue(pEvt,piVar7[4]);
+  uVar6 = evtGetValue(pEvt,piVar7[5]);
+  pEvt->lwData[9] = uVar1;
+  pEvt->lwData[10] = uVar2;
+  pEvt->lwData[0xb] = uVar3;
+  pEvt->lwData[0xc] = uVar4;
+  pEvt->lwData[0xd] = uVar5;
+  pEvt->lwData[0xe] = 0;
+  pEvt->lwData[0xf] = uVar6;
+  return 2;
+}

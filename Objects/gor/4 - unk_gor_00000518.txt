@@ -1,0 +1,12 @@
+extern int (*mapalloc_base_ptr);
+extern int (*unk_gor_bss00000000);
+
+int unk_gor_00000518()
+{
+    if (unk_gor_bss00000000 == 0) {
+    return 2;
+  } 
+    _mapFree(mapalloc_base_ptr,unk_gor_bss00000000);
+    unk_gor_bss00000000 = 0;
+    return 2;
+}
